@@ -29,5 +29,6 @@ public class TestOther {
             }
         }
         System.out.println(sb.substring(0,sb.length()-1).toString());
+
     }
 }
