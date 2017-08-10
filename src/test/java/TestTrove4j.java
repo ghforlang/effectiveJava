@@ -1,5 +1,6 @@
 import gnu.trove.map.TIntIntMap;
-import gnu.trove.map.hash.TIntIntHashMap;
+import gnu.trove.map.hash.*;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -53,6 +54,40 @@ public class TestTrove4j {
 
     @Test
     public void testThree(){
+        TIntIntHashMap map = new TIntIntHashMap();
+        TIntByteHashMap byteMap = new TIntByteHashMap();
+        TIntCharHashMap charMap = new TIntCharHashMap();
+        TIntLongHashMap longMap = new TIntLongHashMap();
+        TIntShortHashMap shortMap = new TIntShortHashMap();
+        TIntObjectHashMap objectMap = new TIntObjectHashMap();
+        Map exchangeMap = new THashMap();
+//        EnumMap enumMap = new EnumMap<Enum, Long>(Enum.class);
+    }
 
+    @Test
+    public void testStrSplit(){
+        String[] str1 = "".split(",");
+        System.out.println(str1.length+"*****************");
+        for (String s : str1){
+            System.out.println(s);
+        }
+
+        String[] str2= ",1,".split(",");
+        System.out.println(str2.length +"****************");
+        for (String s : str2){
+            System.out.println(s);
+        }
+
+        String[] str3 = ",".split(",");
+        System.out.println(str3.length+ "****************");
+        for (String s : str3){
+            System.out.println(s);
+        }
+
+        String[] str4 = StringUtils.split(",");
+        System.out.println(str4.length+"******************");
+        for (String s : str4){
+            System.out.println(s);
+        }
     }
 }
