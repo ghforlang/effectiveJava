@@ -1,5 +1,13 @@
 package com.edu.nbu.chapter3.item1;
 
+import com.sun.org.apache.xalan.internal.xsltc.dom.CachedNodeListIterator;
+
+/**
+ * Created by lenovo on 2017/8/9.
+ */
+
+/**
+ * 违反对称性
 /**
  * TODO
  *
@@ -21,7 +29,7 @@ public final class CaseInsensitiveString {
     @Override
     public boolean equals(Object obj) {
         if(obj instanceof CaseInsensitiveString){
-            return s.equalsIgnoreCase(((CaseInsensitiveString)obj).s);
+            return ((CaseInsensitiveString)obj).s.equalsIgnoreCase(s);
         }
         if(obj instanceof String){
             return s.equalsIgnoreCase((String)obj);
